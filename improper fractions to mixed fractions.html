@@ -1,0 +1,32 @@
+<input id = "i1" >Введите числитель<br>
+<input id = "i2">Введите знаминатель<br>
+<button id = "zzz">Вычеслить</button><br>
+<input id = "i3">Смешанная дробь
+<script>
+let btn = document.getElementById("zzz")
+btn.onclick = function() {
+	let i1 = parseInt(document.getElementById("i1").value)
+		i2 = parseInt(document.getElementById("i2").value)
+		i3 = document.getElementById("i3")
+	let	a
+	let	b
+	
+	if(i1 > i2) {
+		a = Math.floor(i1 / i2)
+		b = i1 % i2
+		i3.value = a + " " + b + "/" + i2
+	}
+	
+	if(i1 == i2) {
+		i3.value = 1
+	}
+	
+	if(i1 < i2) {
+		i3.value = "Это правельная дробь!"
+	}
+	
+	if((i1 == 0) || (i2 == 0)) {
+		i3.value = 0
+	}
+}
+</script>
